@@ -5,5 +5,5 @@
 - Zohaib Ali - Software Development on Crowdsourced Online Survey Framework to Support New Features for Enhanced User Interaction, 2024 ([PDF](https://home.simula.no/~paalh/students/2024-HIOF-ZohaibAli.pdf))
 
 ## 2025
-- Md Rizve Hasan - Validating Accessibility in Crowdsourced Multimedia Survey Frameworks, 2025 (PDF)
+- [Md Rizve Hasan](https://github.com/simula/huldra-students/tree/main/md-rizve-hasan) - Validating Accessibility in Crowdsourced Multimedia Survey Frameworks, 2025 (PDF)
 - Mainul Hasan - Evaluating Storage Solutions for Multimedia-Intensive Survey Frameworks, 2025 (PDF)
