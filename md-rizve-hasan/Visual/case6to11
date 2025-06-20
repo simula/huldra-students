@@ -1,0 +1,42 @@
+import pandas as pd
+
+# Load the updated Excel file with changes if needed
+df = pd.read_excel("IshiharaResults.xlsx")
+
+# Recalculate classification based on Ishihara score
+correct_answers = {
+    'test1': '74', 'test2': '6', 'test3': '16', 'test4': '2', 'test5': '7',
+    'test6': '29', 'test7': '5', 'test8': '45', 'test9': '8', 'test10': '97'
+}
+test_columns = list(correct_answers.keys())
+df[test_columns] = df[test_columns].astype(str)
+correct_series = pd.Series(correct_answers)
+df['Correct_Ishihara_Score'] = df[test_columns].eq(correct_series).sum(axis=1)
+df['Colorblind Status'] = df['Correct_Ishihara_Score'].apply(lambda x: 'Colorblind' if x < 8 else 'Non-Colorblind')
+
+# Define correct answers for Cases 7–11
+correct_case_answers = {
+    'Case 7': 'A',
+    'Case 8': 'B',
+    'Case 10': 'A',
+    'Case 11': 'B'
+}
+
+# Build the response distribution table
+rows = []
+for case, correct_option in correct_case_answers.items():
+    for group in ['Non-Colorblind', 'Colorblind']:
+        subset = df[df['Colorblind Status'] == group]
+        a_count = (subset[case].str.strip() == 'A').sum()
+        b_count = (subset[case].str.strip() == 'B').sum()
+        rows.append({
+            'Case': case,
+            'Colorblind Status': group,
+            'Correct Option': correct_option,
+            'Option A': a_count,
+            'Option B': b_count
+        })
+
+# Create DataFrame
+table_4_3 = pd.DataFrame(rows)
+print(table_4_3)
