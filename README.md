@@ -6,4 +6,4 @@
 
 ## 2025
 - [Md Rizve Hasan](https://github.com/simula/huldra-students/tree/main/md-rizve-hasan) - Validating Accessibility in Crowdsourced Multimedia Survey Frameworks, 2025 (PDF)
-- Mainul Hasan - Evaluating Storage Solutions for Multimedia-Intensive Survey Frameworks, 2025 (PDF)
+- [Mohammad Mainul Hasan](https://github.com/simula/huldra-students/tree/main/mohammad-mainul-hasan) - Evaluating Storage Solutions for Multimedia-Intensive Survey Frameworks, 2025 (PDF)
